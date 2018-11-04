@@ -1,0 +1,14 @@
+Hi! i got the solution for this! first modify your package.json file in dependencies section adding these 4 lines "angular2-materialize": "^15.1.10", "hammerjs": "^2.0.8", "jquery": "^2.2.4", "materialize-css": "^0.100.2", it must look like this
+
+"dependencies": { ... "angular2-materialize": "^15.1.10", "hammerjs": "^2.0.8", "jquery": "^2.2.4", "materialize-css": "^0.100.2", ... }
+
+then in your .angular-cli.json file in scripts and style sections add this in this specific order
+
+"styles": [ "../node_modules/materialize-css/dist/css/materialize.css", "styles.css" ], "scripts": [ "../node_modules/jquery/dist/jquery.js", "../node_modules/hammerjs/hammer.js", "../node
+
+delete your node_modules directory and run
+
+npm i 
+ng serve
+
+Hope this helps!! it works for me perfectly!
