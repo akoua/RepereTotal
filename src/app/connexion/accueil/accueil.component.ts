@@ -36,11 +36,7 @@ export class AccueilComponent implements OnInit {
 
   addArticle(){      
   this.your_articles =false;    
-  this.add_article = true;  
-
-  $(document).ready(() => {
-    $('select').material_select();
-  });
+  this.add_article = true;    
 
   }
 }

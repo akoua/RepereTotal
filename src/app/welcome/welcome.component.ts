@@ -10,6 +10,9 @@ declare let $ : any;
 export class WelcomeComponent implements OnInit {
 
   isConnect: boolean = false;
+  idSideBar: string = "slide-out";
+
+  //pour maintenir la Sidebar même en cas de rafraichissement il faut tenir compte de la conno
 
   constructor(private route: Router) { }
 
@@ -31,9 +34,9 @@ export class WelcomeComponent implements OnInit {
 
   connexion(event){
     //après la verif de 0Auth
-    this.isConnect = true;
-    this.jquery_code();
-    this.route.navigateByUrl('/accueilConnexion');
+    console.log(event);
+    this.isConnect = true;    
+   this.route.navigateByUrl('/yourArticles');
   }
 
 }

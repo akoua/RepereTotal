@@ -1,0 +1,40 @@
+<app-accueil></app-accueil>
+<!-- Nous allons répresenter nos articles dans des cards -->
+<div class="row">
+    <nav>
+        <div class="nav-wrapper ">
+          Vos articles                        
+          <ul class="right hide-on-sm-and-down">                          
+              <li> <div class="input-field col s10 m12 l12">
+                  <input id="recherche" type="text" class="validate">
+                  <label for="recherche">Recherche</label>
+                </div>
+              </li>
+              <li>
+                  <select>              
+                      <option value="1">Le plus recent</option>
+                      <option value="2">Les plus appréciés</option>
+                      <option value="3">Les ... </option>
+                    </select>     
+                    <label class="prefix">Trier par</label>   
+              </li>
+            </ul>
+        </div>
+      </nav>  
+</div>
+
+<div class="row">
+    <div class="card col s12 m4 l4">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img src="../../assets/burgerking.jpeg" alt="" class="activator"/>
+        </div>
+        <div class="card-content">
+            <span class="card-title activator">Card Title<i class="material-icons right">more_vert</i></span>
+            <p><a href="#">This is a link</a></p>
+        </div>
+        <div class="card-reveal">
+            <span class="card-title activator">Card Title<i class="material-icons right">close</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+    </div>
+</div>

@@ -1,37 +1,5 @@
-<!-- <div *ngIf="!isConect">
-    <ul id="slide-out" class="side-nav">
-        <li><div class="user-view">
-          <div class="background">
-            <img src="../../assets/burgerking.jpeg">
-          </div>
-          <a href="#!user"><img class="circle" src="../../assets/burgerking.jpeg"></a>
-          <a href="#!name"><span class="white-text name">John Doe</span></a>
-          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-        </div></li>
-        <li><a routerLink="/searchPlace"><i class="material-icons">store</i>Trouver un magasin</a></li>    
-        <li><a routerLink="/sliderPlace"><i class="material-icons">cloud</i>Vendre</a></li>
-        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-      </ul>      
-</div> -->
-
-  <!-- <ul id="slide-out" class="side-nav" >
-    <div *ngIf="!isConnect">
-      <li><div class="user-view">
-        <div class="background">
-          <img src="../../assets/burgerking.jpeg">
-        </div>
-        <a href="#!user"><img class="circle" src="../../assets/burgerking.jpeg"></a>
-        <a href="#!name"><span class="white-text name">John Doe</span></a>
-        <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-      </div></li>
-      <li><a routerLink="/searchPlace"><i class="material-icons">store</i>Trouver un magasin</a></li>    
-      <li><a routerLink="/sliderPlace"><i class="material-icons">cloud</i>Vendre</a></li>
-      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    </div>
-    </ul> -->
 
     <ul id="slide-out" class="side-nav" >
-        <div *ngIf="isConnect">
         <li><div class="user-view">
           <div class="background">
             <img src="../../assets/burgerking.jpeg">
@@ -40,29 +8,36 @@
           <a href="#!name"><span class="white-text name">John Doe</span></a>
           <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
         </div></li>
-        <li><a routerLink="/searchPlace"><i class="material-icons">store</i>Ajouyer un magasin</a></li>    
-        <li><a routerLink="/sliderPlace"><i class="material-icons">cloud</i>Vendre des articles</a></li>
-        <li><a routerLink="/sliderPlace"><i class="material-icons">cloud</i>Voir vos artciles</a></li>
-        <li><a routerLink="/sliderPlace"><i class="material-icons">cloud</i>Proposer un service</a></li>
+        <div *ngIf="!isConnect">
+          <li><a routerLink="/searchPlace"><i class="material-icons">store</i>Trouver un magasin</a></li>    
+          <li><a routerLink="/sliderPlace"><i class="material-icons">cloud</i>Vendre</a></li>
+          <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
         </div>
-      </ul>  
+
+        <div *ngIf="isConnect">
+          <li><a routerLink="/yourArticles"><i class="material-icons">cloud</i>Voir vos artciles</a></li>
+            <li><a routerLink="/addArticle"><i class="material-icons">store</i>Ajouyer un magasin</a></li>    
+            <li><a routerLink="/sliderPlace"><i class="material-icons">cloud</i>Vendre des articles</a></li>
+            <li><a routerLink="/sliderPlace"><i class="material-icons">cloud</i>Proposer un service</a></li>
+        </div>
+      </ul>        
 
   <ul id='dropdown1' class='dropdown-content'>            
     <li><a (click)=" connexion($event)"><i class="material-icons">view_module</i>Facebook</a></li>
     <li><a (click)=" connexion($event)"><i class="material-icons">cloud</i>Gmail</a></li>
   </ul>
 
-  <!-- ici c'est la sideBar -->
+  <!-- ici c'est la sideBar et la page principale pour la SPA -->
   <div>
     <nav>
         <div class="nav-wrapper ">
-          <a href="#!" data-activates="slide-out" class="btn-collapse brand-logo"><i class="material-icons">menu</i>Menu</a>               
+          <a href="#!" data-activates="slide-out" class="btn-collapse brand-logo"><i class="material-icons">menu</i>Menu</a>                          
   
           <ul class="right hide-on-sm-and-down">                          
               <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Connexion<i class=" large material-icons right">person_pin</i></a></li>
             </ul>
         </div>
-      </nav>
+      </nav>      
 
       <router-outlet></router-outlet>
   </div>
