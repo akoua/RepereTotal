@@ -19,6 +19,8 @@ export class YourArticlesComponent implements OnInit {
     $(document).ready(() => {
       $('select').material_select();
     });
+
+    $(".dropdown-button").dropdown();
   }
 
 }

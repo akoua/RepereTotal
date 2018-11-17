@@ -5,6 +5,7 @@ import { SliderComponent } from './slider/slider.component';
 import { AccueilComponent } from './connexion/accueil/accueil.component';
 import { AddArticlesComponent } from './connexion/add-articles/add-articles.component';
 import { YourArticlesComponent } from './connexion/your-articles/your-articles.component';
+import { YourServicesComponent } from './connexion/your-services/your-services.component';
  
  
  const routes: Routes = [
@@ -14,6 +15,7 @@ import { YourArticlesComponent } from './connexion/your-articles/your-articles.c
    {path:'accueilConnexion', component: AccueilComponent}, 
    {path:'addArticle', component: AddArticlesComponent}, 
    {path:'yourArticles', component: YourArticlesComponent}, 
+   {path:'yourServices', component: YourServicesComponent},
  ];
  
  @NgModule({

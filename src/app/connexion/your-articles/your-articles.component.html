@@ -1,26 +1,30 @@
 <app-accueil></app-accueil>
 <!-- Nous allons répresenter nos articles dans des cards -->
-<div class="row">
-    <nav>
+<ul id="dropdownL" class="dropdown-content">
+        <li><a href="#!">Le plus recent</a></li>
+        <li><a href="#!">Les plus appréciés</a></li>        
+        <li><a href="#!">...</a></li>
+</ul>
+
+<div class="row" >
+    <nav style="background-color: rgb(127, 146, 140)">
         <div class="nav-wrapper ">
           Vos articles                        
           <ul class="right hide-on-sm-and-down">                          
-              <li> <div class="input-field col s10 m12 l12">
+              <li class="col s8 m7 l7"> 
+                <div class="input-field ">
                   <input id="recherche" type="text" class="validate">
-                  <label for="recherche">Recherche</label>
+                  <label for="recherche" style="color: blanchedalmond">Recherche</label>
                 </div>
               </li>
-              <li>
-                  <select>              
-                      <option value="1">Le plus recent</option>
-                      <option value="2">Les plus appréciés</option>
-                      <option value="3">Les ... </option>
-                    </select>     
-                    <label class="prefix">Trier par</label>   
-              </li>
+
+              <li class="col s4 m5 l5">
+                  <a class="dropdown-button" href="#!" data-activates="dropdownL">Trier<i class="material-icons right">arrow_drop_down</i></a>
+              </li>                            
             </ul>
         </div>
       </nav>  
+     
 </div>
 
 <div class="row">
