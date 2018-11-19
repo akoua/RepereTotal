@@ -7,6 +7,7 @@ import { YourArticlesComponent } from './your-articles/your-articles.component';
 import { YourServicesComponent } from './your-services/your-services.component';
 import { AddStoreComponent } from './add-store/add-store.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddServicesComponent } from './your-services/add-services/add-services.component';
 
 @NgModule({
   imports: [    
@@ -14,7 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
   ],
-  declarations: [AccueilComponent, AddArticlesComponent, YourArticlesComponent, YourServicesComponent, AddStoreComponent],
-  exports: [AccueilComponent, AddArticlesComponent, YourArticlesComponent, YourServicesComponent, AddStoreComponent]
+  declarations: [AccueilComponent, AddArticlesComponent, YourArticlesComponent, YourServicesComponent, AddStoreComponent, AddServicesComponent],
+  exports: [AccueilComponent, AddArticlesComponent, YourArticlesComponent, YourServicesComponent, AddStoreComponent, AddServicesComponent]
 })
 export class ConnexionModule { }
